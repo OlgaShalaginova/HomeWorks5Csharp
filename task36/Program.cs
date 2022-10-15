@@ -6,11 +6,15 @@ int[] numbers = new int[size];
 FillArrayRandomNumbers(numbers);
 Console.WriteLine("Массив: ");
 PrintArray(numbers);
-int sum = 0;
+SumElArray(numbers);
 
+void SumElArray (int [] numbers)
+{
+int sum = 0;
 for (int x = 0; x < numbers.Length; x+=2)
     sum = sum + numbers[x];
     Console.WriteLine($"Всего {numbers.Length} чисел, сумма элементов на нечётных позициях = {sum}");
+}
 
 void FillArrayRandomNumbers(int[] numbers)
 {
