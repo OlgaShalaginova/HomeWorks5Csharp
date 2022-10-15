@@ -6,11 +6,14 @@ double[] numbers = new double[size];
 FillArrayRandomNumbers(numbers);
 Console.WriteLine("Массив: ");
 PrintArray(numbers);
-double minValue = Int32.MaxValue;
-double maxValue = Int32.MinValue;
+Raznica(numbers);
 
-for (int x = 0; x < numbers.Length; x++)
+void Raznica(double[] numbers)
 {
+ double minValue = Int32.MaxValue;
+ double maxValue = Int32.MinValue;
+ for (int x = 0; x < numbers.Length; x++)
+  {
     if (numbers[x] > maxValue)
         {
             maxValue = numbers[x];
@@ -19,11 +22,10 @@ for (int x = 0; x < numbers.Length; x++)
         {
             minValue = numbers[x];
         }
+ }
+ Console.WriteLine($"Всего {numbers.Length} чисел. Максимальное значение = {maxValue}, минимальное значение = {minValue}");
+ Console.WriteLine($"Разница между максимальным и минимальным значением = {maxValue - minValue}");
 }
-
-Console.WriteLine($"Всего {numbers.Length} чисел. Максимальное значение = {maxValue}, минимальное значение = {minValue}");
-Console.WriteLine($"Разница между максимальным и минимальным значением = {maxValue - minValue}");
-
 void FillArrayRandomNumbers(double[] numbers)
 {
     for(int i = 0; i < numbers.Length; i++)
