@@ -7,13 +7,16 @@ int[] numbers = new int[size];
 FillArrayRandomNumbers(numbers);
 Console.WriteLine("Массив: ");
 PrintArray(numbers);
-int count = 0;
+FindChetEl(numbers);
 
+void FindChetEl (int [] numbers)
+{
+int count = 0;
 for (int x = 0; x < numbers.Length; x++)
 if (numbers[x] % 2 == 0)
 count++;
-
 Console.WriteLine($"Всего {numbers.Length} чисел, {count} из них чётные");
+}
 
 void FillArrayRandomNumbers(int[] numbers)
 {
