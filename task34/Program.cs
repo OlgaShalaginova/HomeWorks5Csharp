@@ -32,5 +32,5 @@ void FindChetEl (int [] numbers)
  for (int x = 0; x < size; x++)
  if (numbers[x] % 2 == 0)
  count++;
- Console.WriteLine($"Всего {numbers.Length} чисел, {count} из них чётные");
+ Console.WriteLine($"Всего {size} чисел, {count} из них чётные");
 }
